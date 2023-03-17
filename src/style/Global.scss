@@ -1,0 +1,63 @@
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+@font-face {
+  font-family: "Alagard";
+  src: url("../fonts/alagard.ttf");
+}
+
+body {
+  font-family: "VCR OSD Mono";
+  font-size: 18px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #000;
+  width: 100%;
+  margin-top: auto;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: 0.827rem;
+      color: #fff;
+      padding: 5px 0;
+      margin: 0px;
+      &:first-child {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.author-link {
+  color: white;
+  text-decoration: none;
+  transition: .4s ease all;
+  letter-spacing: 1pt;
+}
+
+.author-link:hover {
+  letter-spacing: 3pt;
+  transition: .4s ease all;
+  color: white!important;
+}

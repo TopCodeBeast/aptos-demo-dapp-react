@@ -1,0 +1,252 @@
+$border-color: #f8e226;
+$bg-color: #a00c0c;
+
+@mixin btn-style {
+  background-color: #a00c0c;
+  color: white;
+  border: 2px solid $border-color;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: "VCR OSD Mono";
+  cursor: pointer;
+  &:hover {
+    border-color: #f8e226;
+    color: #f8e226;
+  }
+}
+
+.home {
+  // background: url("../imgs/Golder_order_v2.gif") no-repeat center center/cover;
+  background-color: #222020;
+  width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  header {
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0px;
+
+      .brand {
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem;
+      }
+
+      .wallet-btn {
+        border: 2px solid #f8e226;
+        background-color: #a00c0c;
+        color: #fff;
+        font-size: 1.2rem;
+        font-family: "VCR OSD Mono";
+        padding: 12px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        &:hover {
+          border-color: #a00c0c;
+          color: #f8e226;
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        gap: 1.8rem;
+        li button, a {
+          @include btn-style();
+          cursor: pointer;
+          white-space: nowrap;
+
+          &.stake {
+            padding: 16px 20px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .breed {
+    min-height: 50vh;
+    min-width: 900px;
+    width: 55vw;
+    margin: 0 auto;
+    margin-top: 6%;
+    background-color: rgba(51, 26, 29, 0.9);
+    border: 5px solid #f8e226;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+
+    .archlabs {
+      width: 220px;
+      position: relative;
+
+      .displayer {
+        border: 3px solid #f8e226;
+      }
+
+      button {
+        width: 100%;
+        text-transform: uppercase;
+        border: 3px solid #f8e226;
+        background-color: #a00c0c;
+        padding: 8px 0;
+        margin-top: 30px;
+        color: #fff;
+      }
+
+      .list {
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        background: rgba(51, 26, 29, 0.9);
+        border: 2px solid #f8e226;
+        left: 0px;
+        top: 101%;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0px;
+        
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 5px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          background: #a00c0c;
+          border-radius: 5px;
+          &:hover {
+            background-color: rgba(51, 26, 29, 0.9);
+          }
+        }
+
+        .list-item {
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            border: 2px solid transparent;
+          }
+          p {
+            color: #fff;
+            font-size: 1.2rem;
+            text-align: center;
+          }
+
+          &:hover {
+            img {
+              border: 2px solid #f8e226;
+            }
+          }
+        }
+        .selected {
+          img {
+            border: 2px solid #f8e226;
+          }
+        }
+      }
+    }
+
+    .title {
+      border: 3px solid #f8e226;
+      background-color: #fa9f04;
+      color: #fff;
+      width: 220px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .claw {
+      width: 220px;
+      img {
+        border: 5px solid #f8e226;
+      }
+
+      button {
+        width: 100%;
+        text-transform: uppercase;
+        border: 3px solid #f8e226;
+        background-color: #a00c0c;
+        padding: 8px 0;
+        margin-top: 30px;
+        color: #fff;
+      }
+    }
+    button {
+      width: 100%;
+      text-transform: uppercase;
+      border: 3px solid #f8e226;
+      background-color: #a00c0c;
+      padding: 8px 0;
+      margin-top: 30px;
+      color: #fff;
+    }
+  }
+
+  .not-found-breed,
+  .sm-screen {
+    min-width: 500px;
+    width: 40vw;
+    height: 200px;
+    background-color: rgba(51, 26, 29, 0.9);
+    border: 5px solid #f8e226;
+    margin: 0 auto;
+    margin-top: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      width: 60%;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  .sm-screen{
+    height: auto;
+    min-width: 250px;
+    width: 60vw;
+    margin-top: 30%;
+    p{
+      min-width: 200px;
+    }
+  }
+}
+
+.pontem-wallet-adapter-body {
+  background-color: #a00c0c;
+  border: 2px solid #f8e226;
+
+  button {
+    border: none;
+  }
+}
